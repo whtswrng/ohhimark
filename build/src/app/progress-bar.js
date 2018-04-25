@@ -1,14 +1,15 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 class ProgressBar {
-    constructor(progressBar) {
+    constructor(progressBar, cycleCount) {
         this.progressBar = progressBar;
+        this.cycleCount = cycleCount;
     }
     show() {
-        this.progressBar.start(100, 0);
+        this.progressBar.start(this.cycleCount, 0);
     }
-    increment(number) {
-        this.progressBar.update(number * 10);
+    increment(number = 1) {
+        this.progressBar.increment(number);
     }
     stop() {
         this.progressBar.stop();

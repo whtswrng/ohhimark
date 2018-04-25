@@ -10,8 +10,9 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", { value: true });
 const child_process_1 = require("child_process");
 class MochaScriptRunner {
-    constructor(script) {
+    constructor(script, progressBar) {
         this.script = script;
+        this.progressBar = progressBar;
         this.errorSpecs = [];
     }
     run() {
@@ -19,7 +20,7 @@ class MochaScriptRunner {
             const fullScriptWithReporter = `${this.script} -R json`;
             const response = yield this.exec(fullScriptWithReporter);
             const result = JSON.parse(response.stdout);
-            console.log('finish');
+            this.progressBar.increment();
             this.parseErrors(result);
         });
     }

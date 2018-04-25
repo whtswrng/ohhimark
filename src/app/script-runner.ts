@@ -1,4 +1,5 @@
 import {exec} from 'child_process';
+import {ProgressBar} from "./progress-bar";
 
 export interface CmdOutput {
     stdout: string;
@@ -24,7 +25,7 @@ export class MochaScriptRunner {
 
     private errorSpecs: Array<MochaSpecItem> = [];
 
-    constructor(private script: string) {
+    constructor(private script: string, private progressBar: ProgressBar) {
 
     }
 
@@ -33,7 +34,7 @@ export class MochaScriptRunner {
         const response = await this.exec(fullScriptWithReporter);
         const result = JSON.parse(response.stdout) as Result;
 
-        console.log('finish')
+        this.progressBar.increment();
         this.parseErrors(result);
     }
 

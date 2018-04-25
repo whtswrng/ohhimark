@@ -1,15 +1,15 @@
 export class ProgressBar {
 
-    constructor(private progressBar: any) {
+    constructor(private progressBar: any, private cycleCount: number) {
 
     }
 
     public show(): void {
-        this.progressBar.start(100, 0);
+        this.progressBar.start(this.cycleCount, 0);
     }
 
-    public increment(number: number): void {
-        this.progressBar.update(number * 10);
+    public increment(number: number = 1): void {
+        this.progressBar.increment(number);
     }
 
     public stop(): void {

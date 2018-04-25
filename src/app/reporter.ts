@@ -1,6 +1,5 @@
 import {MochaSpecItem} from "./script-runner";
 import * as colors from 'colors';
-import * as Table from 'cli-table2';
 
 export class MochaReporter {
 
@@ -9,15 +8,12 @@ export class MochaReporter {
     }
 
     public printReport(): void {
-        const table = new Table({
-            head: ['Test', 'Error']
-        });
-
+        console.log('\n');
         this.errorSpecItems.forEach((spec) => {
-            table.push([spec.title, spec.err.message]);
+            console.log(spec.fullTitle.bold.red);
+            console.log(spec.err.message);
+            console.log('\n');
         });
-
-        console.log(table.toString());
     }
 
 }
