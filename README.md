@@ -1,4 +1,6 @@
-## Oh, Hi Mark
+## Oh hi, Mark
+![Oh hi, Mark](https://media1.giphy.com/media/l0HUldzuCa0S16SkM/giphy.gif)
+
 
 CLI tool for finding "non-deterministic" failing tests.
 
