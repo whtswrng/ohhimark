@@ -76,6 +76,13 @@ async function waitFor(ms: number): Promise<any> {
 }
 
 function printHelp(): void {
-    console.log('help');
+    console.log(`ohhimark <mocha_command> (10 <number of iterations>) (--async <async processing> (100 <spawn process treshhold in ms>))`);
 
+    console.log(`   Options`);
+    console.log(`       -h, --help              output usage information`);
+
+    console.log(`   Usage`);
+    console.log(`       ohhimark "mocha --opts ./mocha.opts"    #10x running tests and evaluate`);
+    console.log(`       ohhimark "mocha --opts ./mocha.opts" 25     #25x running tests and evaluate`);
+    console.log(`       ohhimark "mocha --opts ./mocha.opts" 25 --async 450     #25 running async tests, new process is spawning after 450 ms`);
 }
