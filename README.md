@@ -1,4 +1,4 @@
-![Oh hi, Mark](https://media1.giphy.com/media/l0HUldzuCa0S16SkM/giphy.gif)
+![Oh hi, Mark](https://thumbs.gfycat.com/ZealousSoftBarebirdbat-size_restricted.gif)
 ## Oh hi, Mark
 
 CLI tool for finding "non-deterministic" failing tests.
