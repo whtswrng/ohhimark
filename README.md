@@ -1,6 +1,5 @@
-## Oh hi, Mark
 ![Oh hi, Mark](https://media1.giphy.com/media/l0HUldzuCa0S16SkM/giphy.gif)
-
+## Oh hi, Mark
 
 CLI tool for finding "non-deterministic" failing tests.
 
@@ -19,6 +18,7 @@ npm install -g ohhimark
 ```
 
 ## Usage
+![Oh hi, Mark](https://media1.giphy.com/media/l0HUldzuCa0S16SkM/giphy.gif)
 
 ```bash
 ohhimark <mocha_command> (10 <number of iterations>) (--async <async processing> (100 <spawn process treshhold in ms>))
