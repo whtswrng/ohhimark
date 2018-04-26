@@ -18,7 +18,7 @@ npm install -g ohhimark
 ```
 
 ## Usage
-![Oh hi, Mark](https://media.giphy.com/media/3dgdSAtm9xSyU2nbP1/giphy.gif)
+![Oh hi, Mark](https://thumbs.gfycat.com/FreshFrankAstarte-max-14mb.gif)
 
 ```bash
 ohhimark <mocha_command> (10 <number of iterations>) (--async <async processing> (100 <spawn process treshhold in ms>))
